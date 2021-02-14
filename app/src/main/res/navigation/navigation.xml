@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginMainFragment">
+
+    <fragment
+        android:id="@+id/loginMainFragment"
+        android:name="com.modbot.bustle.login.LoginMainFragment"
+        tools:layout="@layout/fragment_login_main">
+        <action
+            android:id="@+id/action_loginMainFragment_to_loginSignUp"
+            app:destination="@id/loginSignUp"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+        <action
+            android:id="@+id/action_loginMainFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginSignUp"
+        android:name="com.modbot.bustle.login.LoginSignUp"
+        tools:layout="@layout/fragment_login_sign_up">
+        <action
+            android:id="@+id/action_loginSignUp_to_loginDetailsFragment"
+            app:destination="@id/loginDetailsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+        <action
+            android:id="@+id/action_loginSignUp_to_loginMainFragment"
+            app:destination="@id/loginMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginDetailsFragment"
+        android:name="com.modbot.bustle.login.LoginDetailsFragment"
+        tools:layout="@layout/fragment_login_details" >
+        <action
+            android:id="@+id/action_loginDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.modbot.bustle.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_routeFragment"
+            app:destination="@id/routeFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_busStopTimelineFragment"
+            app:destination="@id/busStopTimelineFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/busStopTimelineFragment"
+        android:name="com.modbot.bustle.bus_stop_timeline.BusStopTimelineFragment"
+        tools:layout="@layout/fragment_bus_stop_timeline" />
+    <fragment
+        android:id="@+id/busDetailsFragment"
+        android:name="com.modbot.bustle.bus_details.BusDetailsFragment"
+
+        tools:layout="@layout/fragment_bus_details" />
+    <fragment
+        android:id="@+id/busMainFragment"
+        android:name="com.modbot.bustle.bus_main.BusMainFragment"
+
+        tools:layout="@layout/fragment_bus_main" >
+        <action
+            android:id="@+id/action_busMainFragment_to_busDetailsFragment"
+            app:destination="@id/busDetailsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/routeFragment"
+        android:name="com.modbot.bustle.route.RouteFragment"
+
+        tools:layout="@layout/fragment_route" >
+        <action
+            android:id="@+id/action_routeFragment_to_busMainFragment"
+            app:destination="@id/busMainFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"/>
+    </fragment>
+</navigation>

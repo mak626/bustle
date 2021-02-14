@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".bus_main.BusMainFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".bus_main.BusMainFragment" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_card_busmain"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@drawable/ic_card_home"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:context=".bus_main.BusMainFragment"
+        tools:layout_editor_absoluteX="16dp">
+
+
+        <TextView
+            android:id="@+id/from_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="Poojapura - Palayam"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@+id/etagrp_busmain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_main_calendar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/etagrp_busmain"
+            android:layout_width="312dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/from_to">
+
+            <TextView
+                android:id="@+id/etalabel_busmain"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="ETA:"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/etatext_busmain"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:text="5 minutes"
+                android:textColor="@color/lightgreen"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stopgrp_busmain"
+            android:layout_width="312dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="32dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etagrp_busmain">
+
+            <TextView
+                android:id="@+id/destinationlabel_busmain"
+                android:layout_width="144dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Stop:"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/destinationtext_busmain"
+                android:layout_width="351dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:text="DPI Junction"
+                android:textColor="@color/lightgreen"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button_see_detailed_timetable"
+            android:layout_width="361dp"
+            android:layout_height="66dp"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:letterSpacing="0"
+            android:text="See Detailed Timetable"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:backgroundTint="@color/blue"
+            app:cornerRadius="10dp"
+            app:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_main_calendar"
+            android:layout_width="342dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:focusable="true"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:gravity="center"
+            android:letterSpacing="0"
+            android:text="Today , 20/03/2020"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="10dp"
+            app:elevation="10dp"
+            app:iconTint="#A9A9A9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

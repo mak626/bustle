@@ -1,0 +1,26 @@
+(
+<resources>
+    <string name="app_name">Bustle</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="palayam">Palayam</string>
+    <string name="nalanchira">Nalanchira</string>
+    <string name="icon">icon</string>
+    <string name="bus">bus</string>
+    <string name="tle">tle</string>
+    <string name="today">Today,</string>
+    <string name="descending">Descending</string>
+    <string name="type">Type</string>
+    <string name="time">Time</string>
+    <string name="back_button">Back Button</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="bustle">bustle</string>
+    <string name="password">********************</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_up">Sign up!</string>
+    <string name="todo">TODO</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="let_s_get_started">Let’s get Started</string>
+    <string name="sign_up_with_google">Sign up with Google</string>
+</resources>
