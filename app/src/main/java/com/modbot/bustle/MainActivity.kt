@@ -61,20 +61,6 @@ class MainActivity : AppCompatActivity() {
                 binding.toolbar.visibility = View.GONE
             }
         }
-
-
-//        /**
-//         * Check if the user is logged in, if not navigate to login activity
-//         */
-//        val sharedPref = this.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE)
-//        val token: String? = sharedPref.getString(TOKEN, null)
-//        if (token == null) {
-//            Log.d(TAG, "token is null")
-//            val loginIntent = Intent(this, LoginActivity::class.java)
-//            loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-//            startActivity(loginIntent)
-//        }
-
     }
 
     private fun changeStatusBarColor(blue_color: Boolean = false) {
