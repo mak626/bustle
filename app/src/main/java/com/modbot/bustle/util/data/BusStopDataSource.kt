@@ -24,12 +24,13 @@ class BusStopDataSource {
     fun loadBusStop(): List<BusStop> {
         return listOf<BusStop>(
             BusStop("Pattom Bus Stop", LatLng(8.519255458926354, 76.94213829108045)),
+            BusStop("Poojapura Bus Stop", LatLng(8.492508506499554, 76.97547313474382 )),
+            BusStop("Palayam Bus Stop", LatLng(8.50673189413162, 76.9511612937271)),
             BusStop("Kesavadasapuram Bus Stop", LatLng(8.529888098530243, 76.9384947392172)),
             BusStop("Uloor Bus Stop", LatLng(8.530760203594207, 76.92875247114044)),
             BusStop("Peroorkada Bus Stop", LatLng(8.550587341280776, 76.961917465283)),
             BusStop("KSRTC BUS CITY MAIN DEPOT", LatLng(8.496312413817341, 76.94337890491809)),
             BusStop("Thampanoor Bus Stop", LatLng(8.490283343063247, 76.95376774979455)),
-            BusStop("Palayam Bus Stop", LatLng(8.52415490459861, 76.95024535995798)),
             BusStop("PMG junction", LatLng(8.523475843556856, 76.948185423446)),
             BusStop("Vazhuthacaud Bus Stop", LatLng(8.520080520257313, 76.96191833352577)),
             BusStop("KSRTC Bus Terminal Complex", LatLng(8.491738096765852, 76.9515402281844))
