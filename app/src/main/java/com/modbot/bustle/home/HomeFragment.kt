@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -21,6 +23,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
 
     private lateinit var maps: GoogleMap
     private lateinit var dataSetBusStops: List<BusStop>
+    private lateinit var fromLocationText : TextView
+    private lateinit var searchButton :Button
 
 
     override fun onCreateView(
@@ -36,15 +40,19 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         val mapFragment = childFragmentManager.findFragmentById(R.id.mapView) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
 
-        val searchButton = view.findViewById<Button>(R.id.search_button)
-
+        searchButton = view.findViewById<Button>(R.id.search_button)
         searchButton.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_routeFragment)
         }
 
+        fromLocationText = view.findViewById<TextView>(R.id.home_fromtext)
+
+
     }
 
-    // Map Code
+    /**
+     * Map Functions
+     */
     override fun onMapReady(googleMap: GoogleMap?) {
 
         if (googleMap != null) {
@@ -52,7 +60,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
 
         dataSetBusStops = BusStopDataSource().loadBusStop()
-        val busIcon = getBusIcon()
+        val busIcon = busStopIcon()
 
         for (item in dataSetBusStops) {
             maps.addMarker(
@@ -60,17 +68,23 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             )
         }
 
-        maps.moveCamera(CameraUpdateFactory.newLatLng(dataSetBusStops[0].coordinates))
+        maps.moveCamera(CameraUpdateFactory.newLatLng(dataSetBusStops[1].coordinates))
         maps.setMinZoomPreference(14F)
 
-        // Bus Stop Clicking
+        // Bus Stop Marker Clicking
         maps.setOnMarkerClickListener {
             dataSetBusStops = BusStopDataSource().loadBusStop()
-            if (it.title.equals(dataSetBusStops[0].name)) {
+            if (it.title.equals(dataSetBusStops[1].name)) {
                 findNavController().navigate(R.id.action_homeFragment_to_busStopTimelineFragment)
             }
             return@setOnMarkerClickListener false
 
+        }
+
+        //Location Button Clicking
+        maps.setOnMyLocationButtonClickListener{
+            fromLocationText.hint = "Your Location"
+            return@setOnMyLocationButtonClickListener true
         }
 
         //Enable Gps Icon
@@ -79,10 +93,10 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     }
 
 
-    private fun getBusIcon(): BitmapDescriptor {
+    private fun busStopIcon(): BitmapDescriptor {
         val bitmapdraw: BitmapDrawable = ResourcesCompat.getDrawable(
             resources,
-            R.drawable.icon_bus_marker,
+            R.drawable.icon_bus_stop_marker,
             null
         ) as BitmapDrawable//resources.getDrawable(R.drawable.bus_icon) as BitmapDrawable
         val busMarker = Bitmap.createScaledBitmap(bitmapdraw.bitmap, 72, 100, false)
