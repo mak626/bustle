@@ -145,7 +145,7 @@
             android:fontFamily="@font/proxima_nova_bold"
             android:gravity="center"
             android:letterSpacing="0"
-            android:text="Today , 20/03/2020"
+            android:text="Today , 14/02/2020"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp"
