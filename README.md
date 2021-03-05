@@ -1,6 +1,6 @@
 # Bustle
 
-An application to help passengers to  solve these issues in current transportation sytem
+An application to help passengers to  solve these issues in current transportation system
 
 - Being unaware of different routes to reach a particular destination
 - Availability of buses to a particular stop at a particular time
