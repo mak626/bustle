@@ -15,5 +15,3 @@ An application to help passengers to  solve these issues in current transportati
 ![Screenshot2](https://assets.devfolio.co/hackathons/7ff8f8bfe3934fb2b4a49cd6977f1c71/projects/6927c14a48154725a342aebd57426148/pictc8nbkws9.png)
 ![Screenshot3](https://assets.devfolio.co/hackathons/7ff8f8bfe3934fb2b4a49cd6977f1c71/projects/6927c14a48154725a342aebd57426148/piczism2czyp.png)
 ![Screenshot4](https://assets.devfolio.co/hackathons/7ff8f8bfe3934fb2b4a49cd6977f1c71/projects/6927c14a48154725a342aebd57426148/pic6m1vrqcon.png)
-
-[Video](https://rebrand.ly/modbot-bustle)
